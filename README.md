@@ -1,8 +1,15 @@
-# p5.vscode 
+# p5-starter 
 
-p5.vscode helps you create p5.js projects in Visual Studio Code. It also includes autocompletion, a simple tool to browse and install third-party p5 libraries, and the `Live Server` extension. 
+p5-starter helps you create p5.js projects in Visual Studio Code. It also includes autocompletion, a simple tool to browse and install third-party p5 libraries, and the `Live Server` extension. 
 
-I made this extension for my students in particular, but I hope it's helpful for anyone using p5. I'm aware there are a few other VS Code extensions that do something similar, but they didn't quite meet my requirements.
+I forked this extension for me and any students I could work with.
+> but I hope it's helpful for anyone using p5. I'm aware there are a few other VS Code extensions that do something similar, but they didn't quite meet my requirements.  
+
+*from Sam Lavigne*
+
+Well it is Sam, it very much is !! And after using it quite a few times, I found myself writing the same starting lines in addition to what you've done, so I'm adding mine, since I can.
+
+
 
 ## Instructions
 
@@ -33,4 +40,7 @@ I made this extension for my students in particular, but I hope it's helpful for
 - Library installation requires a project workspace containing an `index.html` file and a `libraries` folder.
 - I've attempted to integrate all the contributed libraries found on [p5's library page](https://p5js.org/libraries/). If I've missed anything, please just let me know.
 
-Please [log an issue on GitHub](https://github.com/antiboredom/p5.vscode/issues) if you find any problems or have suggestions.
+
+Please [log an issue on GitHub](https://github.com/rbottura/p5-starter/issues) if you find any problems or have suggestions for my fork of the extension below.
+
+Please [log an issue on GitHub](https://github.com/antiboredom/p5.vscode/issues) if you find any problems or have suggestions for the original extension.

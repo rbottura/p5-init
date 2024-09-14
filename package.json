@@ -1,10 +1,10 @@
 {
-  "name": "p5-vscode",
-  "publisher": "samplavigne",
-  "displayName": "p5.vscode",
+  "name": "p5-starter",
+  "publisher": "raphaelbottura",
+  "displayName": "p5-starter",
   "description": "Create and manage p5.js projects.",
   "version": "1.2.15",
-  "repository": "https://github.com/antiboredom/p5.vscode",
+  "repository": "https://github.com/rbottura/p5-starter",
   "engines": {
     "vscode": "^1.68.0"
   },
@@ -30,11 +30,11 @@
     "commands": [
       {
         "command": "p5-vscode.createProject",
-        "title": "Create p5.js Project"
+        "title": "Create p5.js starter project"
       },
       {
         "command": "p5-vscode.installLibrary",
-        "title": "Install p5.js Contributor Library"
+        "title": "Install p5.js starter Contributor Library"
       }
     ]
   },
@@ -66,6 +66,7 @@
     "vscode-test": "^1.6.1"
   },
   "dependencies": {
-    "got": "^11.8.5"
+    "got": "^11.8.5",
+    "vsce": "^2.15.0"
   }
 }

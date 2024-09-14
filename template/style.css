@@ -1,8 +1,14 @@
 html, body {
   margin: 0;
   padding: 0;
+  
+  overflow: hidden;
 }
 
 canvas {
   display: block;
+}
+
+.p5c-container {
+  z-index: 0;
 }

@@ -138,8 +138,16 @@ async function copyTemplate(dest: string) {
     "index.html",
     "style.css",
     "sketch.js",
+    "functions.js",
     "libraries/p5.min.js",
     "libraries/p5.sound.min.js",
+    "libraries/p5.capture.umd.min.js",
+    "assets/fonts/IBMPlexMono-Bold.ttf",
+    "assets/fonts/IBMPlexMono-Bolditalic.ttf",
+    "assets/fonts/IBMPlexMono-Italic.ttf",
+    "assets/fonts/IBMPlexMono-Medium.ttf",
+    "assets/fonts/IBMPlexMono-Regular.ttf",
+    "assets/fonts/IBMPlexMono-Thin.ttf"
   ];
 
   const baseSrc = Uri.joinPath(Uri.file(__dirname), "../template");
