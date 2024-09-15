@@ -14,8 +14,8 @@ const vsfs = vscode.workspace.fs;
 export async function activate(context: vscode.ExtensionContext) {
   updateJSConfig(context);
 
-  let createProject = vscode.commands.registerCommand(
-    "p5-starter.createProject",
+  let createStarterProject = vscode.commands.registerCommand(
+    "p5-starter.createStarterProject",
     async () => {
       try {
         let filePath = await vscode.window.showOpenDialog({
@@ -45,8 +45,8 @@ export async function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  let installLibrary = vscode.commands.registerCommand(
-    "p5-starter.installLibrary",
+  let installStarterLibrary = vscode.commands.registerCommand(
+    "p5-starter.installStarterLibrary",
     async () => {
       const libraries = p5Libraries
         .filter((l) => l.install)
@@ -89,8 +89,8 @@ export async function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  context.subscriptions.push(createProject);
-  context.subscriptions.push(installLibrary);
+  context.subscriptions.push(createStarterProject);
+  context.subscriptions.push(installStarterLibrary);
 }
 
 async function installP5Library(url: string | string[]) {

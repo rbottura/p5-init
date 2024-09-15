@@ -7,7 +7,7 @@ I forked this extension for me and any students I could work with.
 
 *from Sam Lavigne*
 
-Well it is Sam, it very much is !! And after using it quite a few times, I found myself writing the same starting lines in addition to what you've done, so I'm adding mine, since I can.
+Well it is Sam, it very much is !! And after using it quite a few times, I found myself writing the same starting lines in addition to what you've done, and I added some monospace font for any WEBGL text since loading external font is necessary. 
 
 
 
@@ -15,14 +15,14 @@ Well it is Sam, it very much is !! And after using it quite a few times, I found
 
 ### To create a new p5 project:
 
-1. Open the Command Palette (with `command-shift-p` on Mac, or `ctrl-shift-p` on Windows) and then start typing and select `Create p5.js Project`. 
+1. Open the Command Palette (with `command-shift-p` on Mac, or `ctrl-shift-p` on Windows) and then start typing and select `Create p5.js Starter Project`. 
 2. Select a new empty folder to put your project in.
 3. (optional) click the "Go Live" button in the bottom status bar to open your sketch in a browser
 4. Abolish cops.
 
 ### To install p5 libraries:
 
-1. Open the Command Palette, then start typing and select `Install p5 Contributor Library`
+1. Open the Command Palette, then start typing and select `Install p5 Starter Contributor Library`
 2. Select the library you'd like to install and hit enter.
 3. Select `Install` to download the library and add it as a script tag to your index file, or select `Visit home page` to view documentation for that library.
 
