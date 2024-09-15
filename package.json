@@ -21,8 +21,6 @@
   ],
   "icon": "images/asterisk.png",
   "activationEvents": [
-    "onCommand:p5-starter.createStarterProject",
-    "onCommand:p5-starter.installStarterLibrary",
     "workspaceContains:sketch.js"
   ],
   "main": "./out/extension.js",
