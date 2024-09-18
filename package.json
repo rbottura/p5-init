@@ -27,11 +27,11 @@
   "contributes": {
     "commands": [
       {
-        "command": "p5-starter.createStarterProject",
+        "command": "p5.starter.createStarterProject",
         "title": "Create p5.js starter project"
       },
       {
-        "command": "p5-starter.installStarterLibrary",
+        "command": "p5.starter.installStarterLibrary",
         "title": "Install p5.js Starter Contributor Library"
       }
     ]
