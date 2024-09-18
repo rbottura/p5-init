@@ -15,7 +15,7 @@ export async function activate(context: vscode.ExtensionContext) {
   updateJSConfig(context);
 
   let createStarterProject = vscode.commands.registerCommand(
-    "p5.starter.createStarterProject",
+    "p5-starter.createStarterProject",
     async () => {
       try {
         let filePath = await vscode.window.showOpenDialog({
@@ -46,7 +46,7 @@ export async function activate(context: vscode.ExtensionContext) {
   );
 
   let installStarterLibrary = vscode.commands.registerCommand(
-    "p5.starter.installStarterLibrary",
+    "p5-starter.installStarterLibrary",
     async () => {
       const libraries = p5Libraries
         .filter((l) => l.install)
