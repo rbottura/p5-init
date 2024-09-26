@@ -70,7 +70,8 @@
     "vscode-test": "^1.6.1"
   },
   "dependencies": {
-    "got": "^11.8.6",
+    "@types/got": "^9.6.12",
+    "got": "^14.4.2",
     "vsce": "^2.15.0"
   }
 }
