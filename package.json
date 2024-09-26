@@ -21,9 +21,9 @@
   ],
   "icon": "images/asterisk.png",
   "activationEvents": [
-    "workspaceContains:sketch.js",
     "p5-starter.createStarterProject",
-    "p5-starter.installStarterLibrary"
+    "p5-starter.installStarterLibrary",
+    "workspaceContains:sketch.js"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -66,7 +66,7 @@
     "vscode-test": "^1.6.1"
   },
   "dependencies": {
-    "got": "^11.8.5",
+    "got": "^11.8.6",
     "vsce": "^2.15.0"
   }
 }
