@@ -1,4 +1,5 @@
-const cnvW = WiW, cnvH = WiH
+const WiW = window.innerWidth, WiH = window.innerHeight;
+const cnvW = 400, cnvH = 400;
 
 P5Capture.setDefaultOptions({
   format: "png",
@@ -16,9 +17,9 @@ function preload(){
 function setup() {
   createCanvas(cnvW, cnvH);
 
-  pixelDensity(1)
-  imageMode(CENTER)
-  angleMode(DEGREES)
+  pixelDensity(1);
+  imageMode(CENTER);
+  angleMode(DEGREES);
 
   // rectMode(CORNER)
 
@@ -28,7 +29,13 @@ function setup() {
 function draw() {
   background(50);
 
-  fill('white')
-  noStroke()
-  text('Hello comrads ! 🧙‍♂️', cnvW/2, cnvW/2)
+  fill('white');
+  noStroke();
+  textAlign(CENTER);
+  text('Hello comrads ! 🧙‍♂️', cnvW/2, cnvW/2);
+}
+
+
+function generateStarterOverlay(){
+
 }
