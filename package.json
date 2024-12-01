@@ -3,7 +3,7 @@
   "publisher": "raphaelbottura",
   "displayName": "p5-starter",
   "description": "Create and manage p5.js projects.",
-  "version": "0.5.16",
+  "version": "0.5.17",
   "repository": "https://github.com/rbottura/p5-starter",
   "type": "module",
   "engines": {
