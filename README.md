@@ -1,26 +1,23 @@
-# p5-starter 
+# p5-starter
 
-p5-starter helps you create p5.js projects in Visual Studio Code. It also includes autocompletion, a simple tool to browse and install third-party p5 libraries, and the `Live Server` extension. 
+p5-starter helps you create p5.js projects in Visual Studio Code. It also includes autocompletion, a simple tool to browse and install third-party p5 libraries, and the `Live Server` extension.
 
 I forked this extension for me and any students I could work with.
 > but I hope it's helpful for anyone using p5. I'm aware there are a few other VS Code extensions that do something similar, but they didn't quite meet my requirements.  
-
 *from Sam Lavigne*
 
-Well it is Sam, it very much is !! And after using it quite a few times, I found myself writing the same starting lines in addition to what you've done, and I added some monospace font for any WEBGL text since loading external font is necessary. 
-
-
+Well it is Sam, it very much is !! And after using it quite a few times, I found myself writing the same starting lines in addition to what you've done, and I added some monospace font for any WEBGL text since loading external font is necessary.
 
 ## Instructions
 
-### To create a new p5 project:
+### To create a new p5 project
 
 1. Open the Command Palette (with `command-shift-p` on Mac, or `ctrl-shift-p` on Windows) and then start typing and select `Create p5.js Starter Project`. 
 2. Select a new empty folder to put your project in.
 3. (optional) click the "Go Live" button in the bottom status bar to open your sketch in a browser
 4. Abolish cops.
 
-### To install p5 libraries:
+### To install p5 libraries
 
 1. Open the Command Palette, then start typing and select `Install p5 Starter Contributor Library`
 2. Select the library you'd like to install and hit enter.

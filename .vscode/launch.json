@@ -28,7 +28,6 @@
 				"--extensionDevelopmentPath=${workspaceFolder}",
 				"--extensionTestsPath=${workspaceFolder}/out/test/suite/index"
 			],
-			"trace":true,
 			"outFiles": [
 				"${workspaceFolder}/out/test/**/*.js"
 			],

@@ -94,7 +94,7 @@ export async function activate(context: vscode.ExtensionContext) {
 }
 
 async function installP5Library(url: string | string[]) {
-  const workspacePath = vscode.workspace.rootPath;
+  const workspacePath = vscode.workspace.workspaceFolders + '';
 
   if (
     !workspacePath ||
@@ -191,7 +191,7 @@ async function copyTemplate(dest: string) {
 }
 
 async function updateJSConfig(context: vscode.ExtensionContext) {
-  const workspacePath = vscode.workspace.rootPath;
+  const workspacePath = vscode.workspace.workspaceFolders + '';
   if (!workspacePath) {
     return false;
   }

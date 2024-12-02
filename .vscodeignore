@@ -1,6 +1,6 @@
 .vscode/**
 .vscode-test/**
-# out/test/**
+out/test/**
 src/**
 .gitignore
 vsc-extension-quickstart.md
@@ -9,4 +9,3 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 !p5types/**
-node_modules
