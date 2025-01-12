@@ -6,7 +6,7 @@
   "version": "1",
   "repository": "https://github.com/rbottura/p5-starter",
   "engines": {
-    "vscode": "^1.68.0"
+    "vscode": "^1.95.3"
   },
   "categories": [
     "Other",
@@ -22,7 +22,6 @@
   "icon": "images/asterisk.png",
   "activationEvents": [
     "p5-starter.createStarterProject",
-    "p5-starter.installStarterLibrary",
     "workspaceContains:sketch.js"
   ],
   "main": "./out/extension.js",
@@ -31,10 +30,6 @@
       {
         "command": "p5-starter.createStarterProject",
         "title": "Create p5.js starter project"
-      },
-      {
-        "command": "p5-starter.installStarterLibrary",
-        "title": "Install p5.js Starter Contributor Library"
       }
     ]
   },
@@ -44,14 +39,14 @@
   "scripts": {
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
-    "lint": "eslint src --ext ts",
+    "lint": "eslint src -c ts",
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile && yarn run lint",
     "test": "node ./out/test/runTest.js",
-    "update-libraries": "node create_library_json.js",
-    "update-p5": "./update-p5.sh"
+    "deploy": "vsce publish"
   },
   "devDependencies": {
+    "@eslint/js": "^9.17.0",
     "@types/chai": "^5.0.0",
     "@types/glob": "^7.2.0",
     "@types/mocha": "^10.0.8",
@@ -62,17 +57,22 @@
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1",
     "esbuild": "^0.24.0",
-    "eslint": "^6.8.0",
+    "eslint": "^9.17.0",
     "glob": "^7.2.3",
+    "globals": "^15.14.0",
     "js-yaml": "^3.14.1",
     "mocha": "^10.7.3",
+    "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
-    "vscode-test": "^1.6.1"
+    "typescript-eslint": "^8.19.0",
+    "vscode-test": "^1.6.1",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@types/got": "^9.6.12",
     "got": "^11.8.5",
+    "tsc": "^2.0.4",
     "vsce": "^2.15.0"
   },
   "author": "rbottura <bottura.raphael@gmail.com>",

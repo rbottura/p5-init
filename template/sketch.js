@@ -1,5 +1,6 @@
 const WiW = window.innerWidth, WiH = window.innerHeight;
 const cnvW = 400, cnvH = 400;
+let IBMfont
 
 P5Capture.setDefaultOptions({
   format: "png",
@@ -10,7 +11,7 @@ P5Capture.setDefaultOptions({
 
 function preload(){
   // loadImage()
-  // loadFont()
+  IBM = loadFont('./assets/fonts/IBMPlexMono-Regular.ttf')
   // loadJSON()
 }
 
