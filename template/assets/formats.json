@@ -1,0 +1,39 @@
+{
+  "poster": {
+    "width":496,
+    "height":702,
+    "hasLayers":true,
+    "index" : 0
+  },
+  "landscape": {
+    "width": 720,
+    "height": 405,
+    "hasLayers":true,
+    "index" : 1
+  },
+  "portrait": {
+    "width": 405,
+    "height": 720,
+    "hasLayers":true,
+    "index" : 2
+  },
+  "square": {
+    "width": 540,
+    "height": 540,
+    "hasLayers":true,
+    "index" : 3
+  },
+  "bleeds":{
+    "size": 3
+  },
+  "custom":{
+    "width":500,
+    "height":780,
+    "hasLayers":false
+  },
+  "full":{
+    "width":1920,
+    "height":1080,
+    "hasLayers":false
+  }
+}
