@@ -3,7 +3,7 @@
   "publisher": "raphaelbottura",
   "displayName": "p5-init",
   "description": "",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": "https://github.com/rbottura/p5-init",
   "engines": {
     "vscode": "^1.95.3"
