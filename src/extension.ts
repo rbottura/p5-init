@@ -68,6 +68,7 @@ async function copyTemplate(dest: string) {
     "libraries/p5.min.js",
     "libraries/p5.sound.min.js",
     "libraries/p5.capture.umd.min.js",
+    "assets/formats.json",
     "assets/fonts/IBMPlexMono-Bold.ttf",
     "assets/fonts/IBMPlexMono-Bolditalic.ttf",
     "assets/fonts/IBMPlexMono-Italic.ttf",
