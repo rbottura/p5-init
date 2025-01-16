@@ -13,24 +13,29 @@ use `>p5 init` vscode command hitting `ctrl + shift + P` and select an empty fol
 Schematic :
 
 ```plainText
-┣ 📂assets
-┃ ┣ 📂fonts
-┃ ┃ ┣ 📜IBMPlexMono-Bold.ttf
-┃ ┃ ┣ 📜IBMPlexMono-BoldItalic.ttf
-┃ ┃ ┣ 📜IBMPlexMono-Italic.ttf
-┃ ┃ ┣ 📜IBMPlexMono-Medium.ttf
-┃ ┃ ┣ 📜IBMPlexMono-Regular.ttf
-┃ ┃ ┗ 📜IBMPlexMono-Thin.ttf
-┃ ┗ 📜formats.json
-┣ 📂libraries
-┃ ┣ 📜p5.capture.umd.min.js
-┃ ┣ 📜p5.min.js
-┃ ┗ 📜p5.sound.min.js
-┣ 📜functions.js
-┣ 📜index.html
-┣ 📜sketch.js
-┣ 📜style.css
-┗ 📜ui_fonctions.js
+.
+├── assets
+│   ├── fonts
+│   │   ├── IBMPlexMono-Bold.ttf
+│   │   ├── IBMPlexMono-BoldItalic.ttf
+│   │   ├── IBMPlexMono-Italic.ttf
+│   │   ├── IBMPlexMono-Medium.ttf
+│   │   ├── IBMPlexMono-Regular.ttf
+│   │   └── IBMPlexMono-Thin.ttf
+│   └── formats.json
+├── img
+│   └── fire.gif
+├── js
+│   ├── class.js
+│   ├── functions.js
+│   └── ui_fonctions.js
+├── libraries
+│   ├── p5.capture.umd.min.js
+│   ├── p5.min.js
+│   └── p5.sound.min.js
+├── index.html
+├── sketch.js
+└── style.css
 ```
 
 ## Tips and Tricks
