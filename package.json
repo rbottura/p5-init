@@ -4,7 +4,7 @@
   "displayName": "p5-init",
   "description": "",
   "version": "0.0.1",
-  "repository": "https://github.com/rbottura/p5-starter",
+  "repository": "https://github.com/rbottura/p5-init",
   "engines": {
     "vscode": "^1.95.3"
   },
