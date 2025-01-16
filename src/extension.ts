@@ -9,6 +9,7 @@ const vsfs = vscode.workspace.fs;
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+  updateJSConfig(context);
   // Use the console to output diagnostic information (console.log) and errors (console.error)
   // This line of code will only be executed once when your extension is activated
   console.log('Congratulations, your extension "p5-starter" is now active!');
@@ -113,6 +114,25 @@ async function copyTemplate(dest: string) {
   };
   const jsconfigPath = Uri.joinPath(baseDest, "jsconfig.json");
   writeFileSync(jsconfigPath.fsPath, JSON.stringify(jsconfig, null, 2));
+}
+
+async function updateJSConfig(context: vscode.ExtensionContext) {
+  const workspacePath = vscode.workspace.rootPath;
+  if (!workspacePath) {
+    return false;
+  }
+  const jsconfigPath = path.join(workspacePath, "jsconfig.json");
+  if (!existsSync(jsconfigPath)) {
+    return false;
+  }
+  let jsconfigContents = readFileSync(jsconfigPath, "utf-8");
+  const extensionName = context.extension.id;
+  const currentName = extensionName + "-" + context.extension.packageJSON.version;
+  const regex = new RegExp(extensionName + "-[0-9.]+", "m");
+  if (regex.test(jsconfigContents)) {
+    jsconfigContents = jsconfigContents.replace(regex, currentName);
+    writeFileSync(jsconfigPath, jsconfigContents);
+  }
 }
 
 // This method is called when your extension is deactivated

@@ -28,7 +28,7 @@
     "commands": [
       {
         "command": "p5-starter.createStarterProject",
-        "title": "Create p5.js starter project"
+        "title": "p5 init"
       }
     ]
   },
