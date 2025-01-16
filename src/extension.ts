@@ -61,7 +61,9 @@ async function copyTemplate(dest: string) {
     "index.html",
     "style.css",
     "sketch.js",
-    "functions.js",
+    "js/class.js",
+    "js/ui_functions.js",
+    "js/functions.js",
     "libraries/p5.min.js",
     "libraries/p5.sound.min.js",
     "libraries/p5.capture.umd.min.js",
@@ -81,6 +83,9 @@ async function copyTemplate(dest: string) {
   // create the libraries directory
   const librariesPath = Uri.joinPath(baseDest, "libraries");
   vsfs.createDirectory(librariesPath);
+
+  const jsPath = Uri.joinPath(baseDest, "js");
+  vsfs.createDirectory(jsPath);
 
   const assetsPath = Uri.joinPath(baseDest, "assets/fonts");
   vsfs.createDirectory(assetsPath);
