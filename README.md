@@ -1,43 +1,71 @@
-# p5-starter
+# p5-starter README
 
-p5-starter helps you create p5.js projects in Visual Studio Code. It also includes autocompletion, a simple tool to browse and install third-party p5 libraries, and the `Live Server` extension.
-
-I forked this extension for me and any students I could work with.
-> but I hope it's helpful for anyone using p5. I'm aware there are a few other VS Code extensions that do something similar, but they didn't quite meet my requirements.  
-*from Sam Lavigne*
-
-Well it is Sam, it very much is !! And after using it quite a few times, I found myself writing the same starting lines in addition to what you've done, and I added some monospace font for any WEBGL text since loading external font is necessary.
-
-## Instructions
-
-### To create a new p5 project
-
-1. Open the Command Palette (with `command-shift-p` on Mac, or `ctrl-shift-p` on Windows) and then start typing and select `Create p5.js Starter Project`. 
-2. Select a new empty folder to put your project in.
-3. (optional) click the "Go Live" button in the bottom status bar to open your sketch in a browser
-4. Abolish cops.
-
-### To install p5 libraries
-
-1. Open the Command Palette, then start typing and select `Install p5 Starter Contributor Library`
-2. Select the library you'd like to install and hit enter.
-3. Select `Install` to download the library and add it as a script tag to your index file, or select `Visit home page` to view documentation for that library.
+This is the README for your extension "p5-starter". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
-- Creates a p5.js project by populating an empty folder with required html/css/js files.
-- Browse and install third-party p5.js libraries.
-- Autocompletion and documentation for p5 keywords & functions using TypeScript definitions.
-- Avoids CDN use so that project creation can work offline.
-- Comes bundled with other recommended VS Code extensions to make things easier for beginners & students.
+Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-## Troubleshooting
+For example if there is an image subfolder under your extension project workspace:
 
-- When creating a new project, please select an empty folder.
-- Library installation requires a project workspace containing an `index.html` file and a `libraries` folder.
-- I've attempted to integrate all the contributed libraries found on [p5's library page](https://p5js.org/libraries/). If I've missed anything, please just let me know.
+\!\[feature X\]\(images/feature-x.png\)
 
+> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-Please [log an issue on GitHub](https://github.com/rbottura/p5-starter/issues) if you find any problems or have suggestions for my fork of the extension below.
+## Requirements
 
-Please [log an issue on GitHub](https://github.com/antiboredom/p5.vscode/issues) if you find any problems or have suggestions for the original extension.
+If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+
+## Extension Settings
+
+Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+
+For example:
+
+This extension contributes the following settings:
+
+* `myExtension.enable`: Enable/disable this extension.
+* `myExtension.thing`: Set to `blah` to do something.
+
+## Known Issues
+
+Calling out known issues can help limit users opening duplicate issues against your extension.
+
+## Release Notes
+
+Users appreciate release notes as you update your extension.
+
+### 1.0.0
+
+Initial release of ...
+
+### 1.0.1
+
+Fixed issue #.
+
+### 1.1.0
+
+Added features X, Y, and Z.
+
+---
+
+## Following extension guidelines
+
+Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+
+* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+
+## Working with Markdown
+
+You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+
+* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
+* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
+* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+
+## For more information
+
+* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
+* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+
+**Enjoy!**

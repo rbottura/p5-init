@@ -1,17 +1,29 @@
+// The module 'vscode' contains the VS Code extensibility API
+// Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 import { existsSync, writeFileSync, readFileSync } from "fs";
 import * as path from "path";
 
 const Uri = vscode.Uri;
 const vsfs = vscode.workspace.fs;
-
+// This method is called when your extension is activated
+// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-  updateJSConfig(context);
+  // Use the console to output diagnostic information (console.log) and errors (console.error)
+  // This line of code will only be executed once when your extension is activated
+  console.log('Congratulations, your extension "p5-starter" is now active!');
 
-  const createStarterProject = vscode.commands.registerCommand(
+  // The command has been defined in the package.json file
+  // Now provide the implementation of the command with registerCommand
+  // The commandId parameter must match the command field in package.json
+  const disposable = vscode.commands.registerCommand(
     "p5-starter.createStarterProject",
     async () => {
-      console.log('my command')
+      // The code you place here will be executed every time your command is executed
+      // Display a message box to the user
+      vscode.window.showInformationMessage("Hello World from p5.init!");
+
+      console.log("my command");
       try {
         const filePath = await vscode.window.showOpenDialog({
           canSelectFiles: false,
@@ -39,7 +51,8 @@ export function activate(context: vscode.ExtensionContext) {
       }
     }
   );
-  context.subscriptions.push(createStarterProject);
+
+  context.subscriptions.push(disposable);
 }
 
 async function copyTemplate(dest: string) {
@@ -56,7 +69,7 @@ async function copyTemplate(dest: string) {
     "assets/fonts/IBMPlexMono-Italic.ttf",
     "assets/fonts/IBMPlexMono-Medium.ttf",
     "assets/fonts/IBMPlexMono-Regular.ttf",
-    "assets/fonts/IBMPlexMono-Thin.ttf"
+    "assets/fonts/IBMPlexMono-Thin.ttf",
   ];
 
   const baseSrc = Uri.joinPath(Uri.file(__dirname), "../template");
@@ -67,6 +80,9 @@ async function copyTemplate(dest: string) {
   // create the libraries directory
   const librariesPath = Uri.joinPath(baseDest, "libraries");
   vsfs.createDirectory(librariesPath);
+
+  const assetsPath = Uri.joinPath(baseDest, "assets/fonts");
+  vsfs.createDirectory(assetsPath);
 
   // copy over all the files
   for (const p of paths) {
@@ -86,8 +102,8 @@ async function copyTemplate(dest: string) {
 
   // creates a jsonconfig that tells vscode where to find the types file
   const jsconfig = {
-    "compilerOptions": {
-      "target": "es6",
+    compilerOptions: {
+      target: "es6",
     },
     include: [
       "*.js",
@@ -99,24 +115,5 @@ async function copyTemplate(dest: string) {
   writeFileSync(jsconfigPath.fsPath, JSON.stringify(jsconfig, null, 2));
 }
 
-async function updateJSConfig(context: vscode.ExtensionContext) {
-  const workspacePath = vscode.workspace.workspaceFolders + '';
-  if (!workspacePath) {
-    return false;
-  }
-  const jsconfigPath = path.join(workspacePath, "jsconfig.json");
-  if (!existsSync(jsconfigPath)) {
-    return false;
-  }
-  let jsconfigContents = readFileSync(jsconfigPath, "utf-8");
-  const extensionName = context.extension.id;
-  const currentName = extensionName + "-" + context.extension.packageJSON.version;
-  const regex = new RegExp(extensionName + "-[0-9.]+", "m");
-  if (regex.test(jsconfigContents)) {
-    jsconfigContents = jsconfigContents.replace(regex, currentName);
-    writeFileSync(jsconfigPath, jsconfigContents);
-  }
-}
-
-// this method is called when your extension is deactivated
+// This method is called when your extension is deactivated
 export function deactivate() {}
