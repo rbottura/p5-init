@@ -1,4 +1,4 @@
-# p5-starter README
+# p5-init README
 
 You can download this repo or fork it to add your ideas. Dont hesite to ask for more additions if you think of some, I should find some time to answer in 48h max.
 
@@ -10,15 +10,28 @@ use `>p5 init` vscode command hitting `ctrl + shift + P` and select an empty fol
 
 ### IBM fonts
 
-This extension generate an assets folder with a fonts folder inside containing : 
-`
-IBMPlexMono-Bold.ttf
-IBMPlexMono-Bold-Italic.ttf
-IBMPlexMono-Italic.ttf
-IBMPlexMono-Medium.ttf
-IBMPlexMono-Regular.ttf
-IBMPlexMono-Thin.ttf
-`
+Schematic :
+
+```plainText
+┣ 📂assets
+┃ ┣ 📂fonts
+┃ ┃ ┣ 📜IBMPlexMono-Bold.ttf
+┃ ┃ ┣ 📜IBMPlexMono-BoldItalic.ttf
+┃ ┃ ┣ 📜IBMPlexMono-Italic.ttf
+┃ ┃ ┣ 📜IBMPlexMono-Medium.ttf
+┃ ┃ ┣ 📜IBMPlexMono-Regular.ttf
+┃ ┃ ┗ 📜IBMPlexMono-Thin.ttf
+┃ ┗ 📜formats.json
+┣ 📂libraries
+┃ ┣ 📜p5.capture.umd.min.js
+┃ ┣ 📜p5.min.js
+┃ ┗ 📜p5.sound.min.js
+┣ 📜functions.js
+┣ 📜index.html
+┣ 📜sketch.js
+┣ 📜style.css
+┗ 📜ui_fonctions.js
+```
 
 ## Tips and Tricks
 

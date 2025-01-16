@@ -1,7 +1,7 @@
 {
-  "name": "p5-starter",
+  "name": "p5-init",
   "publisher": "raphaelbottura",
-  "displayName": "p5-starter",
+  "displayName": "p5-init",
   "description": "",
   "version": "0.0.1",
   "repository": "https://github.com/rbottura/p5-starter",
@@ -19,15 +19,16 @@
     "project",
     "template"
   ],
+  "icon": "images/p5init_icon.png",
   "activationEvents": [
-    "p5-starter.createStarterProject",
+    "p5-init.createStarterProject",
     "workspaceContains:sketch.js"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "p5-starter.createStarterProject",
+        "command": "p5-init.createStarterProject",
         "title": "p5 init"
       }
     ]

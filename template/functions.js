@@ -38,14 +38,6 @@ function getArrayOfRandomUniqueInt(n, min, max) {
     return sort(arr);
 }
 
-function setOrtho(cam) {
-    cam.ortho(-width / 2, width / 2, -height / 2, height / 2, 0, 8000);
-}
-
-function setPerspective(fov, cam) {
-    cam.perspective(fov * atan(height / 2 / 800));
-}
-
 const fileTypes = [
     'image/apng',
     'image/bmp',

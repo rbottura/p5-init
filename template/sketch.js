@@ -4,13 +4,15 @@ let formats,
   cnvW,
   cnvH,
   cnv,
-  seed = 1,
-  cstFPS = 12;
-  
-let currentFormatName = "poster", currentFormat;
-let IBMfont;
+  cam;
 
-if (P5Capture){
+const seed = 1,
+  cstFPS = 12;
+
+let currentFormatName = "landscape", currentFormat;
+let IBMfont, fireGif;
+
+if (P5Capture) {
   P5Capture.setDefaultOptions({
     format: "png",
     framerate: 12,
@@ -19,10 +21,10 @@ if (P5Capture){
   });
 }
 
-function preload(){
+function preload() {
   // loadImage()
-  IBM = loadFont('./assets/fonts/IBMPlexMono-Regular.ttf');
-
+  IBMfont = loadFont('./assets/fonts/IBMPlexMono-Regular.ttf');
+  fireGif = loadImage('./img/fire.gif');
   formats = loadJSON("./assets/formats.json", (e) => {
     currentFormat = formats[currentFormatName];
     // updateLayersOptions(currentFormatName, currentFormat.index, currentFormat.hasLayers)
@@ -32,22 +34,36 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(cnvW, cnvH);
+  cnv = createCanvas(cnvW, cnvH);
 
   pixelDensity(1);
   imageMode(CENTER);
   angleMode(DEGREES);
-
   // rectMode(CORNER)
 
-  // noLoop()
+  blendMode(LIGHTEST);
+  loadInputs();
+
+  if (cnv.drawingContext.constructor.name === 'WebGL2RenderingContext') {
+    cam = createCamera();
+    cam.perspective(2.5 * atan(height / 2 / 800));
+    initCamSettings = { isOrtho: true };
+    setCamera(cam);
+  }
 }
 
 function draw() {
+  clear();
   background(50);
 
   fill('white');
   noStroke();
   textAlign(CENTER);
-  text('Hello comrads ! 🧙‍♂️', cnvW/2, cnvW/2);
+  textSize(30);
+  if (cnv.drawingContext.constructor.name === 'WebGL2RenderingContext') {
+    textFont(IBMfont);
+  }
+  text('Hello comrads ! 🧙‍♂️', cnvW / 2, cnvH / 2);
+
+  image(fireGif, cnvW / 2, cnvH / 1.5);
 }

@@ -26,3 +26,133 @@ canvas {
 .canvas-frame {
   border: orange 2px solid;
 }
+
+
+
+/* UI CSS */
+
+#parameters-container {
+  display: flex;
+  /* flex-flow: row wrap; */
+  flex-flow: row wrap;
+  position: absolute;
+  max-width: 25em;
+  z-index: 5;
+  gap: 5px;
+  padding: 5px;
+  border: rgb(255, 255, 255) 2px solid;
+  box-sizing: border-box;
+  border-radius: 8px;
+  /* background-color: rgb(198, 198, 198); */
+  /* backdrop-filter: blur(2px); */
+  background-color: #d6d6d6;
+  box-shadow: 0px 0px 55px -2px rgba(0, 0, 0, 0.2);
+}
+
+.parameters-box {
+  display: flex;
+  flex: 1 1 40%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding: 5px;
+  gap: 5px;
+  background-color: rgba(255, 255, 255, 0.838);
+  border-radius: 5px;
+  /* overflow-y:hidden; */
+}
+
+.handle {
+  text-align: center;
+  font-size: 10px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#parameters-handle {
+  flex: 1 0 calc(100% - 10px);
+
+  border-top: 10px double rgb(127, 127, 127);
+  box-sizing: border-box;
+  padding: 0;
+  border-radius: 0;
+}
+
+.param-label {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+  background-color: rgb(210, 210, 210);
+  color: rgb(0, 0, 0);
+  /* border-radius: 3px; */
+  padding: 2px 5px 3px 5px;
+  font-stretch: ultra-condensed;
+  font-size: 14px;
+  text-transform: capitalize;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.param-input-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5px;
+}
+
+.param-input-wrapper * {
+  flex-grow: 1;
+}
+
+.param-input-wrapper p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.page-size-btn {
+  display: inline-flex;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  background-color: rgb(224, 224, 224);
+  padding: 3px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+}
+
+#player-parameters-wrapper {
+  display: inline-flex;
+  align-self: flex-end;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  margin-bottom: 20px;
+  z-index: 15;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.player-btn {
+  display: flex;
+  cursor: pointer;
+  border: grey solid 2px;
+  border-radius: 3px;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: notoEmoji;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 35px;
+  min-width: 35px;
+  filter: grayscale(1);
+  background-color: rgba(241, 241, 241, 0.28);
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

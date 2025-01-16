@@ -14,7 +14,34 @@
   </head>
 
   <body>
+
+    <div class="rendered-element" id="parameters-container">
+      <div class="handle parameters-box" id="parameters-handle"></div>
+      <div class="parameters-box" id="page-sizes-box">
+        <div class="param-label">resizes</div>
+        <div class="param-input-wrapper" id="page-size-container">
+          <div class="page-size-btn">poster</div>
+          <div class="page-size-btn">landscape</div>
+          <div class="page-size-btn">portrait</div>
+          <div class="page-size-btn">square</div>
+          <div class="page-size-btn">full</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="player-parameters-wrapper">
+      <div class="player-btn" id="show-hide-params-btn">⚙️</div>
+      <div class="player-btn isPlaying" id="play-pause-btn">⏸️</div>
+      <div style="display: none" class="player-btn" id="fullscreen-btn">
+        🖥️
+      </div>
+      <div class="player-btn" id="save-frame-btn">💾</div>
+      <div class="player-btn" id="toggle-cam-btn">🎥</div>
+    </div>
+
+    <script src="ui_fonctions.js"></script>
     <script src="functions.js"></script>
+    <script src="class.js"></script>
     <script src="sketch.js"></script>
   </body>
 </html>
