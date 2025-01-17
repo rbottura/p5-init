@@ -23,9 +23,7 @@ class CanvasControls {
         this.infosIndex = undefined;
     }
     showParameters(showing) {
-        console.log(showing);
         if (showing) {
-            // this.paramContainer.show()
             this.paramContainer.elt.style.display = 'flex';
         } else {
             this.paramContainer.hide();

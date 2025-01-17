@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog],
 and this project adheres to [Semantic Versioning].
 
-## [Unreleased]
-
-- /
-
-## [0.0.2] - 2025-01-16
+## [0.0.5] - 2025-01-17
 
 ### Added
 
-- 
+- demoDrawing in ui_functions
+- demoSetup in ui_functions
 
 ### Changed
 
@@ -24,6 +21,10 @@ and this project adheres to [Semantic Versioning].
 ### Fixed
 
 ### Security
+
+- /
+
+## [0.0.2] - 2025-01-16
 
 ## [0.0.1] - 2025-01-16
 

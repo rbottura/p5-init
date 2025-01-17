@@ -1,14 +1,55 @@
 let myControls;
+if (P5Capture) {
+    P5Capture.setDefaultOptions({
+        format: "png",
+        framerate: 12,
+        quality: 1,
+        width: 320,
+    });
+}
 
 function loadInputs() {
     // Window settings position and draggable
     let settingsWindow = select('#parameters-container');
     let handle = select('.handle');
     handle.draggable(settingsWindow);
-    settingsWindow.position(50, WiH * 0.02);
+    settingsWindow.position(250, WiH * 0.02);
 
     myControls = new CanvasControls(cnv);
     initSizesBtns();
+}
+
+function demoSetup() {
+
+    blendMode(LIGHTEST);
+    randomSeed(cstSEED);
+    imageMode(CENTER);
+    
+    if (cnv.drawingContext.constructor.name === 'WebGL2RenderingContext') {
+        cam = createCamera();
+        cam.perspective(2.5 * atan(height / 2 / 800));
+        initCamSettings = { isOrtho: true };
+        setCamera(cam);
+    }
+
+    loadInputs();
+}
+
+function demoDrawing() {
+    clear();
+    frameRate(cstFPS);
+    background(50);
+
+    fill('white');
+    noStroke();
+    textAlign(CENTER);
+    textSize(30);
+    if (cnv.drawingContext.constructor.name === 'WebGL2RenderingContext') {
+        textFont(IBMfont);
+    }
+    text('Hello comrads ! 🧙‍♂️', cnvW / 2, cnvH / 2);
+
+    image(fireGif, cnvW / 2, cnvH / 1.5);
 }
 
 function resizeRender(format, name) {
@@ -19,12 +60,12 @@ function resizeRender(format, name) {
     cnvH = h;
 
     let sameFormat = (JSON.stringify(format) === JSON.stringify(currentFormat));
-    // console.log(sameFormat)
+
     if (!sameFormat) {
         currentFormat = format;
         currentFormatName = name;
         resizeCanvas(w, h);
-        // if(cnv)
+        
         resetCamera(cam, initCamSettings);
     }
 }
