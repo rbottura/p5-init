@@ -14,13 +14,7 @@ and this project adheres to [Semantic Versioning].
 
 ### Changed
 
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
+- moved demo animation to ui_functions to keep sketch.js as basic as possible.
 
 - /
 
