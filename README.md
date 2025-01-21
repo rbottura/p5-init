@@ -1,6 +1,7 @@
-# p5-init README
+# p5-init
 
 You can download this repo or fork it to add your ideas. Dont hesite to ask for more additions if you think of some, I should find some time to answer in 48h max.
+[vscode marketplace link here](https://marketplace.visualstudio.com/items?itemName=raphaelbottura.p5-init)
 
 ## Usage
 
