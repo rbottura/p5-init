@@ -3,6 +3,7 @@
 import * as vscode from "vscode";
 import { existsSync, writeFileSync, readFileSync } from "fs";
 import * as path from "path";
+import * as cp from "child_process";
 
 const Uri = vscode.Uri;
 const vsfs = vscode.workspace.fs;
@@ -37,7 +38,16 @@ export function activate(context: vscode.ExtensionContext) {
           const destUri = Uri.file(dest);
 
           // open a workspace folder in a new window
-          await vscode.commands.executeCommand("vscode.openFolder", destUri, true);
+          await vscode.commands.executeCommand(
+            "vscode.openFolder",
+            destUri,
+            true,
+            
+          ).then(() => {
+            vscode.window.showInformationMessage(
+              'New sketch opened in a new window. Run the "Install p5 types" task (⇧⌘B) or use npm install manually.'
+            );
+          });
 
           // hacky way to actually open the sketch file...
           if (process.platform !== "win32") {
@@ -45,6 +55,7 @@ export function activate(context: vscode.ExtensionContext) {
               `vscode://file${Uri.joinPath(destUri, "sketch.js").path}`
             );
             await vscode.env.openExternal(sketchFile);
+            runNpmInstall("./");
           }
         }
       } catch (e) {
@@ -65,6 +76,7 @@ async function copyTemplate(dest: string) {
     "js/ui_functions.js",
     "js/functions.js",
     "img/fire.gif",
+    ".vscode/task.json",
     "libraries/p5.min.js",
     "libraries/p5.sound.min.js",
     "libraries/p5.capture.umd.min.js",
@@ -85,10 +97,13 @@ async function copyTemplate(dest: string) {
   // create the libraries directory
   const librariesPath = Uri.joinPath(baseDest, "libraries");
   vsfs.createDirectory(librariesPath);
+  
+  const vscodeTaskPath = Uri.joinPath(baseDest, ".vscode");
+  vsfs.createDirectory(vscodeTaskPath);
 
   const jsPath = Uri.joinPath(baseDest, "js");
   vsfs.createDirectory(jsPath);
-  
+
   const imgPath = Uri.joinPath(baseDest, "img");
   vsfs.createDirectory(imgPath);
 
@@ -119,7 +134,7 @@ async function copyTemplate(dest: string) {
     include: [
       "*.js",
       "**/*.js",
-      Uri.joinPath(Uri.file(__dirname), "../p5types", "global.d.ts").fsPath,
+      // Uri.joinPath(Uri.file(__dirname), "../p5types", "global.d.ts").fsPath,
     ],
   };
   const jsconfigPath = Uri.joinPath(baseDest, "jsconfig.json");
@@ -137,12 +152,31 @@ async function updateJSConfig(context: vscode.ExtensionContext) {
   }
   let jsconfigContents = readFileSync(jsconfigPath, "utf-8");
   const extensionName = context.extension.id;
-  const currentName = extensionName + "-" + context.extension.packageJSON.version;
+  const currentName =
+    extensionName + "-" + context.extension.packageJSON.version;
   const regex = new RegExp(extensionName + "-[0-9.]+", "m");
   if (regex.test(jsconfigContents)) {
     jsconfigContents = jsconfigContents.replace(regex, currentName);
     writeFileSync(jsconfigPath, jsconfigContents);
   }
+}
+
+function runNpmInstall(targetDir: string) {
+  cp.exec(
+    "npm install @types/p5",
+    { cwd: targetDir },
+    (error, stdout, stderr) => {
+      if (error) {
+        vscode.window.showErrorMessage(
+          `Failed to install @types/p5: ${error.message}`
+        );
+        console.error(stderr);
+        return;
+      }
+      vscode.window.showInformationMessage("Successfully installed @types/p5");
+      console.log(stdout);
+    }
+  );
 }
 
 // This method is called when your extension is deactivated

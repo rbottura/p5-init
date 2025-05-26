@@ -1,3 +1,5 @@
+/// <reference path="./node_modules/@types/p5/global.d.ts" />
+
 const WiW = window.innerWidth, WiH = window.innerHeight;
 let formats,
     cnvW,

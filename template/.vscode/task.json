@@ -1,0 +1,14 @@
+{
+    "tasks": [
+    {
+      "label": "Install p5 types",
+      "type": "shell",
+      "command": "npm install @types/p5",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

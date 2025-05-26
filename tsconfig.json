@@ -1,5 +1,7 @@
 {
 	"compilerOptions": {
+		"resolveJsonModule": true,
+		"esModuleInterop": true, 
 		"module": "Node16",
 		"target": "ES2022",
 		"outDir": "out",
@@ -14,5 +16,10 @@
 		// "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */
 		// "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
 		// "noUnusedParameters": true,  /* Report errors on unused parameters. */
-	}
+	},
+	"exclude": [
+		"node_modules",
+		".vscode-test",
+		"p5types"
+	]
 }
